@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>The Dox</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<<<<<<< HEAD
+		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+
+	<body ng-app="formApp" ng-controller="formCtrl">
+
+		<div class="container-fluid">
+
+			<div class="row">
+
+=======
+		<script src="script.js"></script>
+	</head>
+	
+	<body ng-app="formApp" ng-controller="formCtrl">
+		
+		<div class="container-fluid">
+			
+			<div class="row">
+			
+>>>>>>> 07d608f71eef3274534584f7d6ba05738213bd22
+				<div class="col-md-10">
+					<center>
+					<table class="form-table">
+						<thead class="form-head">
+							<tr>
+								<th><h4>Edit Info</h4></th>
+								<th><h4>Delete</h4></th>
+								<th><h4>First Name</h4></th>
+								<th><h4>Last Name</h4></th>
+								<th><h4>E-mail</h4></th>
+								<th><h4>I.D</h4></th>
+							</tr>
+						</thead>
+<<<<<<< HEAD
+
+						<tbody class="form-body">
+							<tr ng-repeat="user in users | filter : {firstName:filter}">
+								<td><button type="button" id="edit-btn" ng-click="editUser(user)">Edit</button></td>
+								<td><button type="button" id="delete-btn" ng-click="deleteUser(user)">Delete</button></td>
+=======
+						
+						<tbody class="form-body">
+							<tr ng-repeat="user in users">
+								<td><button type="button" id="edit-btn" ng-click="editUser(user)">Edit</button></td>
+								<td><button type="button" id="delete-btn" ng-click="deleteUser(item)">Delete</button></td>
+>>>>>>> 07d608f71eef3274534584f7d6ba05738213bd22
+								<td>{{user.firstName}}</td>
+								<td>{{user.lastName}}</td>
+								<td>{{user.email}}</td>
+								<td>{{user.id}}</td>
+							</tr>
+						</tbody>
+					</table>
+<<<<<<< HEAD
+
+				</div>
+
+				<div class="col-md-2" style="border: 1px solid black;">
+
+					<div class="create-user">
+						<form>
+							<h3>Create User</h3>
+
+							<p>First Name:</p>
+							<input type="text" id="new-firstname" placeholder="First Name"/><br>
+
+							<p>Last Name:</p>
+							<input type="text" id="new-lastname" placeholder="Last Name"/><br>
+
+							<p>Email:</p>
+							<input type="text" id="new-email" placeholder="E-mail"/><br>
+
+							<p>I.D:</p>
+							<input type="text" id="new-id" placeholder="User Itentification"/><br>
+
+=======
+					
+				</div>
+				
+				<div class="col-md-2" style="border: 1px solid black;">
+				
+					<div class="create-user">
+						<form>
+							<h3>Create User</h3>
+						
+							<p>First Name:</p>
+							<input type="text" id="new-firstname" placeholder="First Name"/><br>
+						
+							<p>Last Name:</p>
+							<input type="text" id="new-lastname" placeholder="Last Name"/><br>
+						
+							<p>Email:</p>
+							<input type="text" id="new-email" placeholder="E-mail"/><br>
+						
+							<p>I.D:</p>
+							<input type="text" id="new-id" placeholder="User Itentification"/><br>
+						
+>>>>>>> 07d608f71eef3274534584f7d6ba05738213bd22
+							<br><button type="button" ng-click="createUser()"/>Create User</button>
+							<b><p id="message-one"></p></b>
+						</form>
+					</div>
+<<<<<<< HEAD
+
+					<hr>
+
+					<input type="text" ng-model="filter" id="filter" placeholder="Filter By Name"/>
+
+					<hr>
+
+					<div class="edit-user">
+						<form ng-hide="hideForm" id="edit-form">
+							<h3>Edit User</h3>
+
+							<p>First Name:</p>
+							<input type="text" id="edit-firstname" ng-model="firstName" placeholder="First Name"/><br>
+
+							<p>Last Name:</p>
+							<input type="text" id="edit-lastname" placeholder="Last Name"/><br>
+
+							<p>Email:</p>
+							<input type="text" id="edit-email" placeholder="E-mail"/><br>
+
+=======
+					
+					<hr>
+					
+					<div class="edit-user">
+						<form ng-hide="hideForm" id="edit-form"> 
+							<h3>Edit User</h3>
+						
+							<p>First Name:</p>
+							<input type="text" id="edit-firstname" ng-model="firstName" placeholder="First Name"/><br>
+						
+							<p>Last Name:</p>
+							<input type="text" id="edit-lastname" placeholder="Last Name"/><br>
+						
+							<p>Email:</p>
+							<input type="text" id="edit-email" placeholder="E-mail"/><br>
+						
+>>>>>>> 07d608f71eef3274534584f7d6ba05738213bd22
+							<br><button type="button" ng-click="saveChanges(user)"/>Save Changes</button><button type="button" ng-click="undo()">Exit</button>
+							<b><p id="message-two"></p></b>
+						</form>
+					</div>
+<<<<<<< HEAD
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+
+
+			</div>
+
+		</div>
+
+	</body>
+
+=======
+					
+				</div>
+			
+			</div>
+			
+			<div class="row">
+				
+				
+				
+			</div>
+			
+		</div>
+
+	</body>
+	
+>>>>>>> 07d608f71eef3274534584f7d6ba05738213bd22
+</html>

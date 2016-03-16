@@ -1,0 +1,56 @@
+/* New */
+
+body {
+	
+}
+
+.form-head tr th {
+	width: 265px;
+	border: 1px solid black;
+	background-color: #b3b3b3;
+	padding-left: 8px;
+	
+}
+.form-head tr th:first-child, .form-head tr th:nth-child(2) {
+	width: 100px;
+	
+}
+
+.form-body {
+	
+}
+.form-body tr{
+	
+}
+.form-body tr:nth-child(even){
+	background-color: #d9d9d9;
+}
+.form-body tr td{
+	border: 1px solid black;
+	padding: 6px;
+}
+
+input {
+	background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid gray;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    height: 25px;
+}
+
+button {
+	height: 25px;
+	border-radius: 2px;
+    border: 1px solid gray;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+	margin-right: 5px;
+}
+
+.form-table {
+	margin-bottom: 50px;
+}
