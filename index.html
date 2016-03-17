@@ -45,11 +45,6 @@
 						</thead>
 
 						<tbody class="form-body">
-							<tr ng-repeat="user in users | filter : {firstName:filter}">
-								<td><button type="button" id="edit-btn" ng-click="editUser(user)">Edit</button></td>
-								<td><button type="button" id="delete-btn" ng-click="deleteUser(user)">Delete</button></td>
-						
-						<tbody class="form-body">
 							<tr ng-repeat="user in users">
 								<td><button type="button" id="edit-btn" ng-click="editUser(user)">Edit</button></td>
 								<td><button type="button" id="delete-btn" ng-click="deleteUser(item)">Delete</button></td>
@@ -80,6 +75,8 @@
 
 							<p>I.D:</p>
 							<input type="text" id="new-id" placeholder="User Itentification"/><br>
+						</form>
+					</div>
 
 					
 				</div>
@@ -125,6 +122,8 @@
 
 							<p>Email:</p>
 							<input type="text" id="edit-email" placeholder="E-mail"/><br>
+						</form>
+					</div>
 
 					
 					<hr>
@@ -159,22 +158,6 @@
 
 			</div>
 
-		</div>
-
-	</body>
-
-
-					
-				</div>
-			
-			</div>
-			
-			<div class="row">
-				
-				
-				
-			</div>
-			
 		</div>
 
 	</body>
