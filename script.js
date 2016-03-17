@@ -14,10 +14,6 @@ App.factory("userList", ["$firebaseArray",
 
 App.controller("formCtrl", ["$scope", "userList",
 function($scope, userList) {
-
-var App = angular.module("formApp", []);
-
-App.controller("formCtrl", function($scope) {
 	
 	$scope.firstName = '';
 	$scope.lastName = '';
