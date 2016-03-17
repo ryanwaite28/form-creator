@@ -14,15 +14,6 @@
 		<script src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
 		<script src="script.js"></script>
 	</head>
-
-	<body ng-app="formApp" ng-controller="formCtrl">
-
-		<div class="container-fluid">
-
-			<div class="row">
-
-		<script src="script.js"></script>
-	</head>
 	
 	<body ng-app="formApp" ng-controller="formCtrl">
 		
@@ -60,28 +51,6 @@
 
 				<div class="col-md-2" style="border: 1px solid black;">
 
-					<div class="create-user">
-						<form>
-							<h3>Create User</h3>
-
-							<p>First Name:</p>
-							<input type="text" id="new-firstname" placeholder="First Name"/><br>
-
-							<p>Last Name:</p>
-							<input type="text" id="new-lastname" placeholder="Last Name"/><br>
-
-							<p>Email:</p>
-							<input type="text" id="new-email" placeholder="E-mail"/><br>
-
-							<p>I.D:</p>
-							<input type="text" id="new-id" placeholder="User Itentification"/><br>
-						</form>
-					</div>
-
-					
-				</div>
-				
-				<div class="col-md-2" style="border: 1px solid black;">
 				
 					<div class="create-user">
 						<form>
@@ -127,27 +96,6 @@
 
 					
 					<hr>
-					
-					<div class="edit-user">
-						<form ng-hide="hideForm" id="edit-form"> 
-							<h3>Edit User</h3>
-						
-							<p>First Name:</p>
-							<input type="text" id="edit-firstname" ng-model="firstName" placeholder="First Name"/><br>
-						
-							<p>Last Name:</p>
-							<input type="text" id="edit-lastname" placeholder="Last Name"/><br>
-						
-							<p>Email:</p>
-							<input type="text" id="edit-email" placeholder="E-mail"/><br>
-						
-
-							<br><button type="button" ng-click="saveChanges(user)"/>Save Changes</button><button type="button" ng-click="undo()">Exit</button>
-							<b><p id="message-two"></p></b>
-						</form>
-					</div>
-
-
 				</div>
 
 			</div>
