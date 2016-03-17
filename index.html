@@ -10,7 +10,6 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<<<<<<< HEAD
 		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 		<script src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
 		<script src="script.js"></script>
@@ -22,7 +21,6 @@
 
 			<div class="row">
 
-=======
 		<script src="script.js"></script>
 	</head>
 	
@@ -32,7 +30,6 @@
 			
 			<div class="row">
 			
->>>>>>> 07d608f71eef3274534584f7d6ba05738213bd22
 				<div class="col-md-10">
 					<center>
 					<table class="form-table">
@@ -46,19 +43,16 @@
 								<th><h4>I.D</h4></th>
 							</tr>
 						</thead>
-<<<<<<< HEAD
 
 						<tbody class="form-body">
 							<tr ng-repeat="user in users | filter : {firstName:filter}">
 								<td><button type="button" id="edit-btn" ng-click="editUser(user)">Edit</button></td>
 								<td><button type="button" id="delete-btn" ng-click="deleteUser(user)">Delete</button></td>
-=======
 						
 						<tbody class="form-body">
 							<tr ng-repeat="user in users">
 								<td><button type="button" id="edit-btn" ng-click="editUser(user)">Edit</button></td>
 								<td><button type="button" id="delete-btn" ng-click="deleteUser(item)">Delete</button></td>
->>>>>>> 07d608f71eef3274534584f7d6ba05738213bd22
 								<td>{{user.firstName}}</td>
 								<td>{{user.lastName}}</td>
 								<td>{{user.email}}</td>
@@ -88,7 +82,6 @@
 							<p>I.D:</p>
 							<input type="text" id="new-id" placeholder="User Itentification"/><br>
 
-=======
 					
 				</div>
 				
@@ -110,12 +103,10 @@
 							<p>I.D:</p>
 							<input type="text" id="new-id" placeholder="User Itentification"/><br>
 						
->>>>>>> 07d608f71eef3274534584f7d6ba05738213bd22
 							<br><button type="button" ng-click="createUser()"/>Create User</button>
 							<b><p id="message-one"></p></b>
 						</form>
 					</div>
-<<<<<<< HEAD
 
 					<hr>
 
@@ -136,7 +127,6 @@
 							<p>Email:</p>
 							<input type="text" id="edit-email" placeholder="E-mail"/><br>
 
-=======
 					
 					<hr>
 					
@@ -153,12 +143,12 @@
 							<p>Email:</p>
 							<input type="text" id="edit-email" placeholder="E-mail"/><br>
 						
->>>>>>> 07d608f71eef3274534584f7d6ba05738213bd22
+
 							<br><button type="button" ng-click="saveChanges(user)"/>Save Changes</button><button type="button" ng-click="undo()">Exit</button>
 							<b><p id="message-two"></p></b>
 						</form>
 					</div>
-<<<<<<< HEAD
+
 
 				</div>
 
@@ -174,7 +164,7 @@
 
 	</body>
 
-=======
+
 					
 				</div>
 			
@@ -190,5 +180,4 @@
 
 	</body>
 	
->>>>>>> 07d608f71eef3274534584f7d6ba05738213bd22
 </html>
