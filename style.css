@@ -54,3 +54,10 @@ button {
 .form-table {
 	margin-bottom: 50px;
 }
+
+.create-user form p, .edit-user form p {
+	margin-bottom: 5px;
+}
+.create-user form input, .edit-user form input {
+	margin-bottom: 15px;
+}
