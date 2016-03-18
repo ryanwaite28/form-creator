@@ -28,9 +28,9 @@ function($scope, userList) {
 
 	$scope.createUser = function() {
 
-	   var newFirstName = $('#new-firstname').val().toLowerCase();
-	   var newLastName =  $('#new-lastname').val().toLowerCase();
-	   var newEmail =  $('#new-email').val().toLowerCase();
+	   var newFirstName = $('#new-firstname').val();
+	   var newLastName =  $('#new-lastname').val();
+	   var newEmail =  $('#new-email').val();
 	   var newID = $('#new-id').val();
 
 	   if(newFirstName == '') {
@@ -120,25 +120,34 @@ function($scope, userList) {
 	      user.lastName = $('#edit-lastname').val();
 	      user.email = $('#edit-email').val();
 
-	      if(user.firstName === '') {
+	      if(user.firstName == '') {
 	         $('#message-two').text('First Name required');
 	         setTimeout(function(){
 	            $('#message-one').text('');
 	         },3000);
+	         user.firstName = editFirstName;
+	     	 user.lastName = editLastName;
+	      	 user.email = editEmail;
 	         return;
 	      }
-	      if(user.lastName === '') {
+	      if(user.lastName == '') {
 	         $('#message-two').text('Last Name required');
 	         setTimeout(function(){
 	            $('#message-one').text('');
 	         },3000);
+	         user.firstName = editFirstName;
+	     	 user.lastName = editLastName;
+	      	 user.email = editEmail;
 	         return;
 	      }
-	      if(user.email === '') {
+	      if(user.email == '') {
 	         $('#message-two').text('E-mail required');
 	         setTimeout(function(){
 	            $('#message-one').text('');
 	         },3000);
+	         user.firstName = editFirstName;
+	     	 user.lastName = editLastName;
+	      	 user.email = editEmail;
 	         return;
 	      }
 
@@ -152,7 +161,8 @@ function($scope, userList) {
 	      $scope.hideForm = true;
 	      alert("Saved Changes!");
 
-	      return user;
+	      //return user;
+	      $scope.users.$save(user);
 
 	   }
 
@@ -164,7 +174,8 @@ function($scope, userList) {
 
 	   console.log(user);
 	   var index = $scope.users.indexOf(user);
-	   $scope.users.splice(index, 1);
+	   //$scope.users.splice(index, 1);
+	   $scope.users.$remove(index);
 	   $('#message-one').text('User Deleted!');
 	   setTimeout(function(){
 	      $('#message-one').text('');

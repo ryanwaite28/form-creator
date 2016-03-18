@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" type="image/jpg" size="25x25" href="http://kewlaw.com/wp-content/uploads/2016/01/form-clipart.jpg"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
@@ -21,9 +22,9 @@
 			
 			<div class="row">
 			
-				<div class="col-md-10">
+				<div class="col-md-9">
 					<center>
-					<table class="form-table">
+					<table class="table-responsive">
 						<thead class="form-head">
 							<tr>
 								<th><h4>Edit Info</h4></th>
@@ -36,9 +37,9 @@
 						</thead>
 
 						<tbody class="form-body">
-							<tr ng-repeat="user in users">
+							<tr ng-repeat="user in users | filter : {firstName:filter.name}">
 								<td><button type="button" id="edit-btn" ng-click="editUser(user)">Edit</button></td>
-								<td><button type="button" id="delete-btn" ng-click="deleteUser(item)">Delete</button></td>
+								<td><button type="button" id="delete-btn" ng-click="deleteUser(user)">Delete</button></td>
 								<td>{{user.firstName}}</td>
 								<td>{{user.lastName}}</td>
 								<td>{{user.email}}</td>
@@ -49,7 +50,7 @@
 
 				</div>
 
-				<div class="col-md-2" style="border: 1px solid black;">
+				<div class="col-md-3" style="border: 1px solid black;">
 
 				
 					<div class="create-user">
@@ -74,8 +75,8 @@
 					</div>
 
 					<hr>
-
-					<input type="text" ng-model="filter" id="filter" placeholder="Filter By Name"/>
+					<p>Filter Table By First Name</p>
+					<input type="text" ng-model="filter.name" id="filter" placeholder="Filter By Name"/>
 
 					<hr>
 
@@ -97,8 +98,7 @@
 						</form>
 					</div>
 
-					
-					<hr>
+
 				</div>
 
 			</div>
